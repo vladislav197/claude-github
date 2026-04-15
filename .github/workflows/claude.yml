@@ -1,4 +1,3 @@
-@"
 name: Claude Assistant
 on:
   issue_comment:
@@ -16,5 +15,4 @@ jobs:
     steps:
       - uses: anthropics/claude-code-action@v1
         with:
-          claude_code_oauth_token: `${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-"@ | Out-File -FilePath .github\workflows\claude.yml -Encoding utf8
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
